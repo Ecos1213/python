@@ -1,0 +1,3 @@
+print("Hola Mundo con Python") #con print podemos imprimir un texto en consola en python
+#python tiene un .venv que es un ambien virtual que quiere decir esto que cuando compilemos usara el python.exe que esta en el ambiente virtual \.venv\Scripts\python.exe para iniciar en este caso el main.py, ademas este ambiente tambien contiene las librerias de python
+#python es tipado dinamico, es interpretado como php osea que cuando ejecute el codigo lo interpretara y es mas facil de leer
