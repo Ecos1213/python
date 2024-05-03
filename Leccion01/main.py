@@ -1,18 +1,6 @@
-#Tipos bool (boolean)
-miVariable = True  #recierda que se debe escribir en forma capitalizen que es que la primera letra tiene que ir en mayuscula si no python no lo reconocera
-print(miVariable)
+#Funcion input para procesar la entrada del usuario
+#resultado = input()  #el metodo input sirve para tomar los datos del usuario por medio de consola, este puede que no necesite un parametro o puede llevar un parametro que es el mensaje que queremos colocar en consola de tipo string
+resultado = input("Escribe un mensaje: ") # ademas el metodo input retorna un string por eso podemos dejarlo en una variable, ya que este metodo input retorna un valor tipo string
 
-miVariable = False
-print(miVariable)
-
-miVariable = 3 > 2
-print(miVariable)
-
-miVariable = 1 > 2
-print(miVariable)
-
-#como vemos nos adelantamos un poco usamos el if en python y como vemos la variable no lleva parentesis y no lleva llaves {} si no : y automaticamente nos identa el codigo por que lo que pasa es que python identifica lo que esta dentro es gracias a la identacion del codigo e igual el else tambien funciona igual lleva : para decirle que ahi comienza el else y lo que esta identado del else para abajo es parte del else hasta las siguientes linea no sean identada
-if miVariable:
-    print("El resultado fue verdadero")
-else:
-    print("El resultado fue falso")
+print("Valor proporcionado:", resultado)
+print("Fin del programa")
