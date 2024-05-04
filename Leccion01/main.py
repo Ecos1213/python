@@ -1,8 +1,0 @@
-#Funcion input para procesar la entrada del usuario
-#resultado = input()  #el metodo input sirve para tomar los datos del usuario por medio de consola, este puede que no necesite un parametro o puede llevar un parametro que es el mensaje que queremos colocar en consola de tipo string
-numero1 = int(input("Escribe el primer numero: ")) # ademas el metodo input retorna un string por eso podemos dejarlo en una variable, ya que este metodo input retorna un valor tipo string
-numero2 = int(input("Escribe el segundo numero: ")) # si nos paramos encima del metodo en este caso puedes tomar el input y le damos ctrl + space nos aparecera una ventana le damos click a los tres puntos y le damos quick documentation y ahi nos muestra una documentacion de lo que hace el metodo y que retorna y vemos que retorna un str, tambien podemos darle a quick definition y nos mostrara una breve definicion de la funcion, como vemos en el input dice que esta funcion acepta cualquier(any) tipo de dato como parametro y retorna un str (el simbolo -> representa to_do lo que va a retornar ese metodo en python)
-
-resultado = numero1 + numero2 # como input devuelve un string, al no hacer la conversion concatenara y no sumara el resultado, por eso envolvimos todos los metodos inputs para que convierte el string en int y asi poder hacer la suma
-# eso si como estamos usando una conversion de string a tipo int y dentro tenemos el input al devolver un caracter o cadena de caracter y no numeros nos dara un error pero veremos mas adelante como manejar errores en python, esto lo veremos en la clase de Exception and error handling en python
-print("El resultado de la suma es:", resultado)
