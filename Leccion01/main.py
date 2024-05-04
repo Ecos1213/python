@@ -1,3 +1,11 @@
-#Califica tu dia de 1 a 10
-resultado = int(input("Como estuvo tu dia? (1 a 10): "))
-print(resultado)
+#Se solicita incluir la siguiente informacion acerca de un libro:
+#titulo
+#autor
+#debes imprimir la informacion en el siguiente formato:
+#proporciona el titulo:
+#proporciona el autor:
+#<titulo> fue escrito por <autor>
+print("Se solicita incluir la siguiente informacion acerca de un libro")
+titulo = input("Proporciona el titulo del libro: ")
+autor = input("Proprociona el autor del libro: ")
+print(titulo, "fue escrito por", autor)
