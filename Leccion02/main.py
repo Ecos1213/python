@@ -1,23 +1,31 @@
-operandoA = 3
-operandoB = 2
-suma = operandoA + operandoB  # usamos el operador de addicion en este caso hara una sumatoria y no una concatenacion esto es por que ambos son numericos y no strings
-print('Resultado de la suma:', suma)  #si queremos usar menos carateres podemos usar mejor comillas simple para definir strings
-print(f'resultado suma: {suma}')  # hay otra manera de inprimir en python que es el f literal, colocamos dentro como parametro en el print la letrra f y despues colocamos un string en comillas simples o dobles dentro del string podemos usar la interpolacion que son llaves dentro del string {} y la variable a imprimir dentro de estas llaves y esto nos imprimira el resultado, esto es como javascript cuando usamos ´´
+"""
+Instrucciones de la tarea:
 
-resta = operandoA - operandoB #operando de resta
-print(f'Resultado de la resta: {resta}')
+- En el siguiente ejercicio se solicita calcular el area y el perimetro de un rectangulo,
+para ello deberemos crear las siguientes variables
 
-multiplicacion = operandoA * operandoB  #operando de multiplicacion
-print(f'Resultado de la multiplicacion {multiplicacion}')
+alto(int)
+ancho(int)
 
-division = operandoA / operandoB  #operando de la division, podemos ver que en el resultado da 1.5 esto quiere decir que python automaticamente transforma la variable division en punto flotante
-print(f'Resultado de la division: {division}')
+- El usuario debe proporcionar los valores de largo y ancho, y despues se debe imprimir el resultado en el siguiente formato
+(no usar acentos y respetar los espacios, mayusculas, minusculas y saltos de linea):
 
-division = operandoA // operandoB #operando de la division que solo nos devuelve tipo entero, como vemos en el anterior ejercicio de la diviosion python automaticamente nos convirtio la division en punto flotante si no queremos que haga esto podemos usar // para que solo nos entre de la division el entero y no mas
-print(f'Resultado de la division entera(int): {division}')
+Proporciona el alto:
+proporciona el ancho:
+Area: <area>
+Perimetro: <perimetro>
 
-modulo = operandoA % operandoB  #operando de modulo o residuo
-print(f'Resultado residuo division (modulo): {modulo}')
+Las formulas para calcular el area y el perimetro de un rectangulo son:
+Area: alto * ancho
+Perimetro: (alto + ancho) * 2
 
-exponente = operandoA ** operandoB #operadxor de exponente, esto es 3 elevado a la 2 osea 3 * 3 y da 9 recuerda que la base es el operadorA y el exponente el operadorB
-print(f'Resultado del exponente {exponente}')
+"""
+# en python podemos tambien realizar comentarios con tres veces comillas dobles y este comentario es comentario multilinea
+
+
+alto = int(input("Proporciona el alto del rectangulo: ")) #tener cuidado con los acentos en python por que puede que no abra el archivo o aparezca una respuesta erronea
+ancho = int(input("Proporciona el ancho del rectangulo: "))
+area = alto * ancho
+perimetro = (alto + ancho) * 2  #recuerda que la presedencia de operadores es importante en la programacion por eso el perimtro lleva parentesis para que primero haga la suma y despues la multiplicacion, recuerda que la multiplicacion tiene mas presedencia de operadores que la suma por lo tanto si no colocamos el parentesis primero ejecutara la multiplicacion
+print(f'area: {area}')
+print(f'Perimetro: {perimetro}')
