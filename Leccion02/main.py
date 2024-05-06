@@ -1,32 +1,27 @@
-#operadores de asignacion
-miVariable = 10  #cada vez que usamos el = estamos usando el operador de asignacion
-print(miVariable)
+#Operadores de operacion, nos sirve para comparar si dos valores son distintos o iguales
+a = 4
+b = 2
 
-miVariable = miVariable + 1
-print(miVariable)
-#incremento con reasignacion
-miVariable += 1  # como en php y otros lenguajes podemos usar el simbolo += para hadcer una suma que es igual miVariable = miVariable + 1
-print(miVariable)
+# en este caso por presedencia de operadores primero se evalua lo que esta la derecha y luego lo que esta en la izquierda osea que primero hara la igualdad y despues asignara el resultado
+resultado = a == b  # a es igual a b?; este es el simbolo de igualdad en python ==
+print(f'Resultado == : {resultado}')
 
-#miVariable = miVariable - 2
-miVariable -= 2  #tambien podemos hacerlo con la resta, multiplicacion, division y cualquier operador aritmetico
-print(miVariable)
+# la presedencia en este caso sucede lo mismo que con el caso anterior
+resultado = a != b  # a es diferente a b?; este es el simbodo de diferente en python !=
+print(f'Resultado != : {resultado}')
 
-#miVariable = miVariable * 3
-miVariable *= 3
-print(miVariable)
+# la presedencia en este caso sucede lo mismo que con el caso anterior
+resultado = a > b  # a es mayor a b?; este es el simbodo de mayor en python >
+print(f'Resultado > : {resultado}')
 
-#miVariable = miVariable // 2
-miVariable //= 2
-print(miVariable)
+# la presedencia en este caso sucede lo mismo que con el caso anterior
+resultado = a >= b  # a es mayor o igual a b?; este es el simbodo de mayor e igual en python >=
+print(f'Resultado >= : {resultado}')
 
-#miVariable = miVariable ** 2
-miVariable **= 2
-print(miVariable)
+# la presedencia en este caso sucede lo mismo que con el caso anterior
+resultado = a < b  # a es menor a b?; este es el simbodo de menor en python <
+print(f'Resultado < : {resultado}')
 
-#miVariable = miVariable / 2
-miVariable /= 2
-print(miVariable)
-
-
-
+# la presedencia en este caso sucede lo mismo que con el caso anterior
+resultado = a <= b  # a es menor o igual a b?; este es el simbodo de menor e igual en python <=
+print(f'Resultado <= : {resultado}')
