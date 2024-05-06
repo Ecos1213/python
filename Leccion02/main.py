@@ -1,23 +1,32 @@
-operandoA = 3
-operandoB = 2
-suma = operandoA + operandoB  # usamos el operador de addicion en este caso hara una sumatoria y no una concatenacion esto es por que ambos son numericos y no strings
-print('Resultado de la suma:', suma)  #si queremos usar menos carateres podemos usar mejor comillas simple para definir strings
-print(f'resultado suma: {suma}')  # hay otra manera de inprimir en python que es el f literal, colocamos dentro como parametro en el print la letrra f y despues colocamos un string en comillas simples o dobles dentro del string podemos usar la interpolacion que son llaves dentro del string {} y la variable a imprimir dentro de estas llaves y esto nos imprimira el resultado, esto es como javascript cuando usamos ´´
+#operadores de asignacion
+miVariable = 10  #cada vez que usamos el = estamos usando el operador de asignacion
+print(miVariable)
 
-resta = operandoA - operandoB #operando de resta
-print(f'Resultado de la resta: {resta}')
+miVariable = miVariable + 1
+print(miVariable)
+#incremento con reasignacion
+miVariable += 1  # como en php y otros lenguajes podemos usar el simbolo += para hadcer una suma que es igual miVariable = miVariable + 1
+print(miVariable)
 
-multiplicacion = operandoA * operandoB  #operando de multiplicacion
-print(f'Resultado de la multiplicacion {multiplicacion}')
+#miVariable = miVariable - 2
+miVariable -= 2  #tambien podemos hacerlo con la resta, multiplicacion, division y cualquier operador aritmetico
+print(miVariable)
 
-division = operandoA / operandoB  #operando de la division, podemos ver que en el resultado da 1.5 esto quiere decir que python automaticamente transforma la variable division en punto flotante
-print(f'Resultado de la division: {division}')
+#miVariable = miVariable * 3
+miVariable *= 3
+print(miVariable)
 
-division = operandoA // operandoB #operando de la division que solo nos devuelve tipo entero, como vemos en el anterior ejercicio de la diviosion python automaticamente nos convirtio la division en punto flotante si no queremos que haga esto podemos usar // para que solo nos entre de la division el entero y no mas
-print(f'Resultado de la division entera(int): {division}')
+#miVariable = miVariable // 2
+miVariable //= 2
+print(miVariable)
 
-modulo = operandoA % operandoB  #operando de modulo o residuo
-print(f'Resultado residuo division (modulo): {modulo}')
+#miVariable = miVariable ** 2
+miVariable **= 2
+print(miVariable)
 
-exponente = operandoA ** operandoB #operadxor de exponente, esto es 3 elevado a la 2 osea 3 * 3 y da 9 recuerda que la base es el operadorA y el exponente el operadorB
-print(f'Resultado del exponente {exponente}')
+#miVariable = miVariable / 2
+miVariable /= 2
+print(miVariable)
+
+
+
