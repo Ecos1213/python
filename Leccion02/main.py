@@ -1,8 +1,7 @@
-a = int(input('Escribe un valor numerico: '))
+edadAdulto = 18
+edadPersona = int(input("Proporciona tu edad: "))
 
-#print(a % 2)
-
-if a % 2 == 0:
-    print(f'El valor de a {a} es numero par')
+if edadPersona >= edadAdulto:
+    print(f'La persona con edad {edadPersona} es un adulto')
 else:
-    print(f'El valor de a {a} es numero impar')
+    print(f'La persona con edad {edadPersona} es menor de edad')
