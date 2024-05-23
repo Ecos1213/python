@@ -1,6 +1,5 @@
-#condicion = True #con booleano nos funcionara la condicion y pasara por verdadero en este caso
-#condicion = 10 # pero si usamos un numero nos dara tambien la condicion veradera ya que tiene algo y lo toma como verdadero si no tuviera nada esto nos daria la condicion false
-condicion = '' # esto tambien sucede si es una cadena de texto vacia nos darala la condicion falsa si esta llena nos dara la verdadera, hay que tener mucho cuiado con esto
+#le damos click al numero de linea de codigo para coloca run breakpoint y le damos click derecho debug mode, al lado de consola le podemos dar a las flechas el mas importante es el step over que no saltara linea en linea
+condicion = True #al darle step over podemos ver que en la consola de debug que es Threads & Variables que ya aparece que la variable condicion esta en true, podemos darle step over para ver el flujo que maneja el debug
 
 if condicion:
     print('Condicion verdadera') #python nos agrega una tabulacion despues de los puntos, python no usa llaves para abrir o cerrar bloques de codigo, con python solo los espacios en blanco en este caso la identacion es suficiente para que lo interperte como un nuevo bloque de codigo y todas las lienas que tengan un tabulador
@@ -8,8 +7,6 @@ if condicion:
 else:
     print('Condicion falsa')
 
-
-#en esta siguiente linea de codigo ya estamos una condicion mas detallada diciendo que si es un booleano true o un booleano false imprima algo si no imprima condicion reconocida
 
 if condicion == True:
     print('Condicion verdadera')
