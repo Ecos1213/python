@@ -1,16 +1,16 @@
-#le damos click al numero de linea de codigo para coloca run breakpoint y le damos click derecho debug mode, al lado de consola le podemos dar a las flechas el mas importante es el step over que no saltara linea en linea
-condicion = True #al darle step over podemos ver que en la consola de debug que es Threads & Variables que ya aparece que la variable condicion esta en true, podemos darle step over para ver el flujo que maneja el debug
+numero = int(input('Proporciona un valro entre 1 y 3: '))
 
-if condicion:
-    print('Condicion verdadera') #python nos agrega una tabulacion despues de los puntos, python no usa llaves para abrir o cerrar bloques de codigo, con python solo los espacios en blanco en este caso la identacion es suficiente para que lo interperte como un nuevo bloque de codigo y todas las lienas que tengan un tabulador
-    # si no agregamos un tabulador o un solo espacio en el print nos dara un error por no indentar
+numeroTexto = ''
+
+if numero == 1:
+    #recuerda que si declaramos variable solo dentro del if recuerda el scope esa variable solo funcionara en elif por eso es mejor declarar fuera la variable por seguridad de que no sucede un error por culpa del scope por eso numerotexto la declaramos afuera
+    numeroTexto = 'Numero uno'
+elif numero == 2:
+    numeroTexto = 'Numero dos'
+elif numero == 3:
+    numeroTexto = 'Numero tres'
 else:
-    print('Condicion falsa')
+    numeroTexto = 'Valor fuera de rango'
 
+print(f'Numero proporcionado: {numero} - {numeroTexto}')
 
-if condicion == True:
-    print('Condicion verdadera')
-elif condicion == False:
-    print('Condicion falsa')
-else:
-    print('Condicion no reconocida')
