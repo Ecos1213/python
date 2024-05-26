@@ -1,13 +1,19 @@
-condicion = True
+mes = int(input('Proporciona mes del año (1-12): '))
+estacion = None # en python podemos declarar una variable como None, esto sirve para indicarle que esta variable no va a contener ningun valor
 
-# if condicion:
-#    print('Condicion verdadera')
-# else:
-#    print('Condicion falsa')
+# esto tiene como beneficion si hacemos la siguiente condicional, verificando si la variable contiene none ejecute algo
+# if estacion == None
 
-#sintaxis simplificada operador ternario
-#el operador ternario es un poco diferente en los otros lenguajes primero tenemos que colocar lo que se ejecutara si la condicion es true despues la condicion con el if y el else al final y a su lado derecho lo que se ejecutara si la condicion es falsa o mejor dicho lo que ejecutara cuando entre al else
-print('Condicion verdadera') if condicion else print('Condicion falsa')
+if mes == 1 or mes == 2 or mes == 12:
+    estacion = 'Invierno'
+elif mes == 3 or mes == 4 or mes == 5:
+    estacion = 'Primavera'
+elif mes == 6 or mes == 7 or mes == 8:
+    estacion = 'Verano'
+elif mes == 9 or mes == 10 or mes == 11:
+    estacion = 'Otoño'
+else:
+    estacion = 'Mes incorrecto'
 
-# recuerda el operador terniario se utiliza cuando tenemos pocas lineas de codigo esto quiere decir que si el if tiene solo una linea de codigo y el else se recomienda usar el operador terneario pero si tiene mas de una linea de codigo se recomienda usar la condicional normal ya que no se podra ejecutar estas lineas de codigo
-# ademas que el operador terniario no usa elif (else if)
+print(f'Para el mes {mes} la estación es: {estacion}')
+
