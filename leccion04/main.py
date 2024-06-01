@@ -1,8 +1,7 @@
-# Imprimir los numeros enteros del 0 al 5 utilizando un ciclo while
+# imprimir numeros de 5 a 1 de manera descendente
+minimo = 1
+contador = 5
 
-maximo = 5
-contador = 0
-while contador <= maximo:
+while contador >= minimo:
     print(contador)
-    # contador = contador + 1
-    contador += 1
+    contador -= 1 # contador = contador - 1
