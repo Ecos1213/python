@@ -1,9 +1,6 @@
-cadena = 'Hola' # recuerda una cadena es un arreglo de caracteres y cada caracter es un indice 0 es h, 1 es o, 2 es l, 3 es a
-
-# en este caso esto seria el ciclo foreach, ya que va a iterar cada uno de los elementos
-for letra in cadena: # como vemos asi se hace un for each en python y es con el for
-    print(letra) # la primera variable es cada valor del array, por eso usamos la variable letra
-else: # opcionalmente podemos colocar un else asi como el while la diferencia es que cuando termine de recorrer el ciclo for o foreach ejecutara el codigo del else
+for letra in 'Holanda': # en el ciclo for del foreach podemos colocar toda la cadena en el foreach como se ve aqui
+    if letra == 'a': # usamos el if para verificar si existe una letra a y si es asi imprimeme una letra y despues con el break interrumpimos el ciclo permanentemente y por esto el else no se ejecuta
+        print(f'Letra encontrada: {letra}')
+        break # el break rompe el ciclo por lo tanto apenas encuentre una 'a' rompera el ciclo y no continuara y el else tampoco se ejecutara por que al romper el ciclo el else del ciclo no se ejecuta
+else:
     print('Fin ciclo for')
-
-
