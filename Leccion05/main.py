@@ -36,3 +36,35 @@ for nombre in nombres: # si queremos iterar una lista con el for podemos hacerlo
     print(nombre)
 else:
     print('No existe mas nombres en la lista')
+
+# preguntar el largo de una lista
+print(len(nombres)) # con el metodo len nos retorna la cantidad de elementos que tiene una lista y como parametro pasamos la lista
+
+# agrega un elemeto a la lista
+nombres.append('Lorenzo') # append agrega un elemento a la lista y como vemos usamos la variable donde contiene el array y usamos el metodo de esta misma variable para que agrege en este array con el append el elemento que agregamos como parametro al metodo y este agragara un nuevo elemento al final de la lista
+print(nombres)
+
+# insertar un elemento en un indice especifico
+nombres.insert(1, 'Octavio') # insert agrega un elemento a la lista en indice especifico, tiene dos parametros primero es el indice donde queremos que lo inserta para despues correr a los otros valores al lado derecho y despues el elemento a insertar y como el append este metodo se usa de la misma manera usando el array con un punto para invocar el metodo
+print(nombres)
+
+# remover un elemento
+nombres.remove('Octavio') # el metodo remove remueve un elemento, lo que hace es buscar en el array el valor que agregamos como parametro si encuentra un elemento similar al parametro que agregamos lo remueve y este tambien se invoca a traves del tipo de dato array
+print(nombres)
+
+# remover el ultimo valor agregado de la lista
+# si dejamos el cursos en el metodo y le damos ctrl + espacio nos aparecera una ventana al darle a los 3 puntos podemos elegir quick documentation y nos muestra que hace el metodo
+nombres.pop() # el metodo pop elimina el ultimo elemento de la lista y regresa el indice indicado, no necesita argumentos y se invoca tambin atravez del array
+print(nombres)
+
+# eliminar un elemento segun el indice indicado
+del nombres[0] # para eliminar un elemento segun el indice indicado usamos al principio la palabra del y despues colocamos el array y entre corchetas el indice a eliminar
+print(nombres)
+
+# si queremos limpiar todos los elementos de la lista
+nombres.clear() # el metodo clear eliminara todos los elementos de la lista
+print(nombres) # mostrara el array vacio por que aun esta definido en la memoria y es un array vacio
+
+#el problema es que clear no elimina de la memoria nuestra lista, pero podemos hacer lo siguiente para borrar nuestra lista de la memoria
+del nombres # con la palbra del y despues el array borrara la lista por completo incluso de la memoria
+print(nombres) # como borramos la lista de la memoria nos aparecera un error ya que no esta definido
