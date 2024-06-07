@@ -23,3 +23,26 @@ print(frutas[-1]) # como vimos en las listas tambien en las tuplas podemos usar 
 print(frutas[0:1]) # como en las listas podemos acceder a un rango de valores que era que comienza desde el indice 0 : 1 tome solo 1 valor de la tupla, osea que solo mostrara el primer valor
 # una cosa a tener en cuenta es que cuando accedemos a rango de valores de una tupla y este solo devuelve un solo valor, este para no ser un tipo de dato string y sea una tupla este tiene que contener por lo menos una coma para que determine que es una tupla de lo contrario seria una cadena entre parentesis, por eso si es solo un elemento este ultimo elemento y unico tiene que tener una coma dentro de los parentesis
 print(frutas[0:2]) # tomara de 0 a 2 valores osea 0 y 1
+
+#recorrer eleemntos
+for fruta in frutas:
+    print(fruta, end=' ') # el print automaticamente genera un salto de linea y si queremos que el texto este en una sola linea podemos hacer, el print tiene varios parametros y uno de estos es end, este parametro es el que aplica el salto de linea ya que tiene como dato opcional '\n' y esto es un salto de linea en python pero podemos pasarle otro valor para que separe los datos de otra manera o otro diferente salto de lineas
+
+# si intentamos cambiar el elemento de una tupla como lo haciamos con el array esto nos dara un error
+#frutas[0] = 'Pera'  # al ser inmutable no podemos modificarlo de esta manera pero si hay una manera de modificar sus elementos
+
+# cambiar valor tupla
+# para poder modificar una tupla tenemos que convertir la tupla en una lista ya que las listas son mutables
+frutaLista = list(frutas) # si queremos pasar de una tupla a una lista podemos usar el metodo list y pasamos como parametro la tupla y lo convertira en una lista
+frutaLista[0] = 'Pera' # ahora como es una lista podemos modificar su valor
+frutas = tuple(frutaLista) # despues tenemos que convertir un array a una tupla, podemos usar el metodo tuple y pasamos como parametro el array para convertir un array en una tupla
+print('\n', frutas) # como modificamos el end del print anteriormente al volver a usar el print y como el print anterior no tenia un salto de linea este estara en la misma linea del anterior print podemos corregir esto colocando al principio de este print un salto de linea \n
+
+# no es buena pratica convertir de una tupla a una lista para modificar sus valores, por eso desde el principio debemos definir bien el tipo de dato o datos que va a tener la tupla
+
+#aunque no podemos usar eliminar, agregar o insertar en una tupla lo que si podemos hacer es eliminar la tupla por completo incluso de la memoria cache
+# eliminar la tupla
+del frutas
+print(frutas) # esto dara un error por que se elimino por completo la tupla incluso del cache (esto quiere decir que es como si nunca hubiera existido
+
+# recuerda se debe planear bien si conocemos que los elementos van a cambiar tenemos que usar una lista si no tenemos que usar una tupla
