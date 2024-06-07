@@ -1,33 +1,25 @@
-#sintaxis de range(inicio<opcional>, fin<requerido>, incremento<opcional>)
+# un tupla es inmutable ( no se puede modificar los valores recien agregados) y una lista si es mutable
+# una lista tiene un orden y nos permite modificar agregar  e insertar elementos
+# las tuplas tienen similitudes con las listas, una tupla sigue guardando el orden de los elementos que se van agregando como la lista pero ya no se puede modificar los elementos de la tupla a diferencia de una tupla ya no podemos ni agregar elementos, modificarlos y tampoco eliminarlos por eso se le conoce como un tipo inmutable
 
-# ejercicio 1. iterar un rango de 0 a 10 e imprimir numeros divisibles entre 3
+#definir una tupla
+frutas = ('Naranja', 'Platano', 'Guayaba') # para declara una tupla usamos parentesis () de en vez de corchetes [] que haciamos con las listas y esta tambien respetan el orden la unica diferencia es que son inmutables (ni insertar, ni modificar, ni elminar), esta inmutabilidad sucede cuando declaramos la tupla con sus elementos
+# recuerda una tupla se ve igual que una lista solo que las tuplas son inmutables
 
-# ejercicio 2. crear un rango de numeros de 2 a 6, e imprimelos
+# las funciones que podemos usar en una tupla tambien son similares
 
-# ejercicio 3. crear un rango de 3 a 10, pero con incremento de 2 en 2, en lugar de 1 en 1
+print(frutas) # podemos imprimir la tupla completa como haciamos con el array y nos mostrara la tupla, esta imprimi con parentesis de en vez de corchetes
 
-# el metodo range tiene 3 parametros desde donde comienza(opcional), donde termina (este campo es requerido), e incremento (opcional) y recuerda que esto creara un array con los numeros segun los parametros que pasemos, si colocamos el paramertro incremento tenemos que colocar el parametro de inicio para que funcione y si queremos imprimir digamos hasta el 6 en el fin tenemos que colocar como arguemnto final 7 ya que aun colocando inicio en 2 contara de 0 a 6 (7 numeros)
-print('Rango de 0 a 10 con numeros divisibles entre 3')
-for i in range(11): # este range crea un array de 0 a 10 recuerda que se coloca 11 por el 0 tambien lo incluye
-    if i % 3 != 0: # si el mod de 3 es diferente a 0 entonces que continue en la siguiente iteracion
-        continue
-    print(i) # imprimirea de 3 en 3 comenzando en 0
-else:
-    print("Fin del ciclo")
+#saber el largo de la tupla
+print(len(frutas)) # como vimos anterior en la lista el metodo len nos devuelve la cantidad de elementos que tiene la tupla
 
-print('Rango con valores de inicio = 2 y fin = 6')
-rango = range(2, 7) # este range creara 7 numeros en un array de la siguiente manera [2,3,4,5,6] como vemos son solo 5 numeros pero se debe colocar el final incluyendo el 0 y 1 de ahi abri 7 numeros
-for i in rango:
-    print(i) #imprimira de 2 a 6
-else:
-    print("Fin del ciclo")
+#acceder a un elemento
+print(frutas[0]) # para acceder a un valor podemos hacer lo mismos que las listas usando corchetes y el numero del indice podemos acceder a ese valor
 
-print('Rango con valores de inicio = 3, fin = 10 y el incremento = 2')
-rango = range(3, 11, 2) # este range creara un array de la siguiente manera [3,5,7,9] como vimos anterior recuerda que el argumento 11 (que es donde termina el range) quiere decir que tomara de 0 hasta 10 aun si inicia en cualquier valor que coloquemos como argumento y ademas esto incrementara de 2 en 2 los numeros que estan acutales por eso 3, 5, 7, 9
-for i in rango:
-    print(i) #imprimira de 3 incrementando de 2 en 2
-else:
-    print('Fin del ciclo')
+# navegacion inversa
+print(frutas[-1]) # como vimos en las listas tambien en las tuplas podemos usar numeros negativos y este como en las listas nos dara el ultimo valor si es -1 si es -2 antes del ultimo y asi sucesivamente
 
-
-
+# acceder a un rango de valores
+print(frutas[0:1]) # como en las listas podemos acceder a un rango de valores que era que comienza desde el indice 0 : 1 tome solo 1 valor de la tupla, osea que solo mostrara el primer valor
+# una cosa a tener en cuenta es que cuando accedemos a rango de valores de una tupla y este solo devuelve un solo valor, este para no ser un tipo de dato string y sea una tupla este tiene que contener por lo menos una coma para que determine que es una tupla de lo contrario seria una cadena entre parentesis, por eso si es solo un elemento este ultimo elemento y unico tiene que tener una coma dentro de los parentesis
+print(frutas[0:2]) # tomara de 0 a 2 valores osea 0 y 1
