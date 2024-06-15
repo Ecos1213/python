@@ -1,9 +1,9 @@
-def miFuncion(nombre, apellido): # hay diferencia entre argumento y parametros los parametros son variables definidas en la funcion y el argumento son valores que pasan cuando llamamos a la funcion
-    print('Saludos desde mi funcion')
-    print(f'Nombre: {nombre}, Apellido: {apellido}') # podemos usar los parametros dentro de nuestra funcion
+def sumar(a, b):
+    # recuerda return devuelve el valor de la funcion y al usar la palabra return las siguiente lineas de codigo no se ejecutaran
+    # total = a + b
+    # return total
+    return a + b # podemos retornar dos maneras diferentes una variable o colocar la operacion aritmetica que igual devolvera el resutado no mas de la operacion, en esta expresion los parentesis son opcionales pero es bueno colocar parentesis a otras expresiones
 
-miFuncion('Juan', 'Perez') # aca pasamos los argumentos que ya son los valores ( ya sea que estos valores esten en una variable o pasar los datos fijamente), si no pasamos estos argumentos nos dara un error por que son obligatorios no opcionales
-miFuncion('Karla', 'Lara')
-
-
-
+resultado = sumar(5, 3) # como en la funcion estamos retornando un valor, este valor podemos asignarlo a una variable, recuerda lo que hara el codigo es entrar a la funcion ejecutara la linea de codigo y al tener un return ejecutara el codigo hasta return y devolvera el valor y despues se hara la asignacion a la variable este podemos verlo con el debug mode (para entrar a la funcion en debug mode tenemos que usar step into o la flecha hacia abajo cuando llege a la funcion)
+print(f'Resultado de la suma: {resultado}')
+print(f'Resultado de la suma: {sumar(5,3)}') # tambien lo que podemos hacer es simplemente llamara la funcion y al retornar el valor solo imprimira su valor
