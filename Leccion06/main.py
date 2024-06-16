@@ -1,9 +1,11 @@
-def sumar(a, b):
-    # recuerda return devuelve el valor de la funcion y al usar la palabra return las siguiente lineas de codigo no se ejecutaran
-    # total = a + b
-    # return total
-    return a + b # podemos retornar dos maneras diferentes una variable o colocar la operacion aritmetica que igual devolvera el resutado no mas de la operacion, en esta expresion los parentesis son opcionales pero es bueno colocar parentesis a otras expresiones
+def sumar(a = 0, b = 0): # como vimos en los parametros de funciones si en el llamado de la funcion no colocamos los argumentos nos dara un error para evitar esto podemos asignar un valor dentro de los parametros de la funcion para que cuando no se agrege en los argumentos de la funcion use ñps valores por defecto, para dejar valores por defecto simplemente agregamos los datos con igual en las variables que estan en parentesis de la funcion
+    return a + b
 
-resultado = sumar(5, 3) # como en la funcion estamos retornando un valor, este valor podemos asignarlo a una variable, recuerda lo que hara el codigo es entrar a la funcion ejecutara la linea de codigo y al tener un return ejecutara el codigo hasta return y devolvera el valor y despues se hara la asignacion a la variable este podemos verlo con el debug mode (para entrar a la funcion en debug mode tenemos que usar step into o la flecha hacia abajo cuando llege a la funcion)
+resultado = sumar(5, 3)
 print(f'Resultado de la suma: {resultado}')
-print(f'Resultado de la suma: {sumar(5,3)}') # tambien lo que podemos hacer es simplemente llamara la funcion y al retornar el valor solo imprimira su valor
+print(f'Resultado de la suma: {sumar()}') # como vemos no pasamos argumentos y no nos da error pero nos da la suma esto es gracias a que en la funcion tenemos valores por defecto y por eso da 0 por que usa esos valores por defecto y suma 0 + 0 ( ya que a = 0 y b = 0 en valores por defecto)
+
+# aunque si dejamos encima del llamado de la funcion el mouse nos mostrara una pista de los tipos de datos que tenemos que pasarle a la funcion y el tipo de dato de retorno, pero esto es una pista no es obligatorio incluso al no ser obligatorio podemos pasarle cualquier tipo de dato, tambien podemos colocarle este tipo de sintaxis que vemos en la pista pero aun colocandolo al ser solo una pista de datos podemos enviarle aun asi cualquier tipo de dato tanto en los argumentos como en el retorno
+def sumar2(a: int = 0, b: int = 0) -> int: # como vemos podemos colocar una pista de retorno con el simbolo -> y podemos colocarle cualquiert tipo de dato que queremos que retorne y como vimos anteriormente de las pistas de las variables podemos hacerlo igual en los parametros usando : y cualquier tipo de dato que queremos asignarle perto recuerda esto es una pista por ende python no dara error si pasamos otro tipo de dato, ya que en python los tipos de datos son dinamicos
+    return a + b
+print(sumar2('1','0'))
