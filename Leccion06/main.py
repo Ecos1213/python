@@ -1,9 +1,23 @@
-# En python podemos pasar argumentos variables en funciones, esto quiere decir que podemos colocar el *NombreDevariable para decirle que vamos a pasarle cualquier cantidad de argumentos a esta funcion
-def listarNombres(*nombres): # como desconocemos el numero de argumentos total que queremos pasar a una funcion, para esto podemos usar el *NombreDevariable como argumetno dentro de los parentesis, como no sabemos cuantros elementos vamos a recibir en el argumento, podemos anteponer el asterisco al argumento para que tome todos esos parametros del llamado de la funcion
-    # dentro de nuestro codigo el argumento con asterisco se convertira en una tupla, de manera interna python este argumento *nombres lo convertira en una tupla con todos los elementos que pasemos del parametro del llamado de una funcion
-    for nombre in nombres: # como es una tupla podemos iterar tranquilamente, pero recuerda al ser una tupla es inmutable
-        print(nombre)
+"""
+Crear una funcion para sumar los valores recibidos de tipo numerico,
+utilizando argumentos variables *args como parametro de la funcion
+y regresar como resultado la suma de todos los valores pasados como arguemntos
+"""
 
-listarNombres('Juan', 'Karla', 'Maria', 'Ernesto') # recuerda que todos estos elementos pasaran a ser una tupla en el argumento de la funcion pero recuerda que hay que saparar cada dato con una coma para que entienda que es un elemento de la tupla del argumento de la funcion con asterisco
-listarNombres('Laura', 'Carlos') # como tenemos un argumento variable, puede recibir sin ningun problema diferentes cantidad de elementos y funcionara correctamente esto es una de las ventaja pero recuerda que esto lo convertira a una tupla por ende estos elementos no se podran modificar, eliiminar y agregar
-# en python el manual veremos de manera frecuento que el argumento variable es : *args (de arguments) pero este nombre es opcional realmente podemso colocar cualquier nombre
+
+# Definimos nuestra funcion para sumar valores
+def sumarValores(
+        *args):  # se recumenda usar un nombre de verbo, se recomienda usar un verbo y despues especificar que hace el verbo en este caso seria sumar valores el verbo es sumar y especificamos que son los valores a sumar
+    # si no tenemos todavia la logica de nuestra funcion podemos usar la palabra reservada pass para que python comprenda que esta funcion no tiene logica osea va a estar vacia, por lo tanto aunque la llamemos python vera que esta vacia y no mostrara un error, pero si escribimos una logica en la funcion y tenemos la palabra reservada pass ejecutara la lgoica con normalidad pero se recomienda por buenas praticas quitarla
+    #pass
+
+    #por convecion se recomienda en los argumentos varibles usar la palabra args, es por buenas praticas
+
+    resultado = 0
+    # Iteramos cada elemento
+    for valor in args: # recuerda aca no se usa *, ya que el asterico se usa dentro del argumento de la funcion, el asterisco se usa como parte de la definicion de la firma de estre metodo, es como la firma para declarar que es un argumento variado mientras que aca usamos es la variable como tal
+        resultado += valor # es igual a resultado = resultado + valor
+    return resultado
+
+
+print(sumarValores(3, 5, 9, 4, 6))
