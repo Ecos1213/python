@@ -1,28 +1,17 @@
 """
-Imprimir numeros de 5 a 1 de manera descendete usando funciones recursivas.
-Puede ser cualquier valor positivo, ejemplo, si pasamos el valor de 5, debe imprimir:
-5
-4
-3
-2
-1
-en caso de pasar el valor de 3, debe imprimir:
-3
-2
-1
-
-si se pasan valores negativos no imprime nada
+Ejercicio: Calculadora de impuestos
+crear una funcion para calcular el total de un pago inlcuyendo un impuesto aplicado.
+# Formula: pago_total = pago_sin_impuesto + pago_sin_impuetos * (impuesto/100)
 """
 
-def imprimirNumeroRecursivo(numero):
-    if numero >= 1:
-        print(numero)
-        return imprimirNumeroRecursivo(numero - 1)
-    if numero == 0:
-        return # en python podemos dejar un return vacio y no retornara nada y termina la funcion pero en este caso al ser una funcion recursiva termina la funcion para que las otras se ejecuten hasta terminar de ejecutar todas
-    elif numero <= 0:
-        print('Valor incorrecto...')
+#Funcion que calcula el total de un pago incluyendo el impuesto
+def calcularTotalPago(pagoSinImpuesto, impuesto = 0):
+    pagoTotal = pagoSinImpuesto + pagoSinImpuesto * (impuesto/100)
+    return pagoTotal
 
-imprimirNumeroRecursivo(5)
-imprimirNumeroRecursivo(3)
-imprimirNumeroRecursivo(-3)
+# Ejecutamos funcion
+pagoSinImpuesto = float(input("Proporcione el pago sin impuesto: "))
+impuesto = float(input("Proporcione el monto del impuesto: "))
+pagoConImpuesto = calcularTotalPago(pagoSinImpuesto, impuesto)
+print(f"""Pago con impuesto: 
+{pagoConImpuesto}""")
