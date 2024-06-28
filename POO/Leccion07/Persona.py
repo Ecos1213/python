@@ -1,0 +1,8 @@
+# Para crear un archivo en pycharm simplemente le damos click derecho a la carpeta raiz y le damos click en file python, recuerda la nomenclatura de las clases siempre tienen que ir en capitalize osea siempre la primera letra de la palabra va en mayuscula y las demas en minuscula si va a compañado de dos palabras distintas siempre la primera letra va en mayuscula de cada palabra y las demas en minusculas y las clases no deben ir en plural y se escribe en sustantivo y puede ir acompañado de un adjetivo
+class Persona: # con la palabra clave class y el nombre que queremos colocarle a la clase se crea una clase pero recuerda que el archivo como la clase tienen que llamarse de igual manera por buenas praticas y despues dos puntos : asi como la funcion para decirle a python que ahi en adelante esas son las lineas de codigo que va a contener la clase pero recuerda que identando para que hagan parte de la clase y la primera linea de codigo que no lo este ya no haria parte de la clase
+    pass # en la clase podemos colocar pass si no tenemos definida la clase para que no nos de error asi como vimos en las funciones, esto tambien se hace para que la clase sea valida o para que el nuevo tipo sea valido (para poder usarlo y no nos de error)
+
+
+
+
+print(type(Persona)) # con type como vimos en clases pasas nos dice que tipo de dato es la varaible, en este caso estamos mirando que tipo de dato es la clase y nos mostrara que es de tipo class, ya que type tambien nos muestra si es de tipo class (osea si es de tipo clase, si es una clase)
